@@ -1,193 +1,222 @@
-PERSONAL FINANCE TRACKER
-Master your personal finances with a robust Java app for tracking income, expenses, budgets, and insightful reports.
 
-Features
-Transaction Management:
+---
+# 💰 Personal Finance Tracker
 
-Add income/expenses with amount, date, category, and notes.
+Master your personal finances with a robust Java application for tracking income, expenses, budgets, and insightful financial reports.
 
-Edit or delete past transactions easily.
+---
 
-Recurring transactions (e.g., monthly rent auto-entry).
+## 🚀 Features
 
-Financial Dashboard:
+### 📌 Transaction Management
 
-Real-time balance display with income vs. expense pie chart.
+* Add income/expenses with amount, date, category, and notes
+* Edit or delete past transactions
+* Support for recurring transactions (e.g., monthly rent)
 
-Monthly/yearly spending trends and net worth tracking.
+### 📊 Financial Dashboard
 
-Filter views by date range or category.
+* Real-time balance overview
+* Income vs Expense visualization
+* Monthly & yearly spending trends
+* Filter by date range or category
 
-Budgeting Tools:
+### 💸 Budgeting Tools
 
-Set custom monthly budgets per category with progress bars.
+* Set monthly budgets per category
+* Track spending with progress indicators
+* Overspending alerts and notifications
+* Savings goal tracking (e.g., vacation fund)
 
-Overspend alerts and remaining budget notifications.
+### 📈 Reporting & Analytics
 
-Goal tracking for savings targets (e.g., vacation fund).
+* Category-wise spending reports
+* Export reports to CSV/PDF
+* Identify top spending categories
+* Insights for saving opportunities
 
-Reporting & Analytics:
+### 🔐 Data & Security
 
-Detailed category-wise spending reports.
+* Local file-based storage
+* Automatic backups
+* Password protection
+* Import/export bank CSV data
 
-Export to CSV/PDF for sharing or tax purposes.
+### 🧑‍💻 User Experience
 
-Top spend categories and savings opportunities insights.
+* Simple CLI interface
+* Searchable command history
+* Multiple account support
+* Custom categories & currency symbols
 
-Data & Security:
+---
 
-Local file-based persistence with automatic backups.
+## 🛠️ Prerequisites
 
-Password protection for sensitive data.
+Make sure you have:
 
-Import/export from bank CSV statements.
+* Java Development Kit (JDK) 11+
 
-User Experience:
+  ```bash
+  java -version
+  ```
+* Maven 3.6+
 
-Intuitive CLI with searchable command history.
+  ```bash
+  mvn -version
+  ```
+* Git
 
-Multiple account support (personal, business, savings).
+  ```bash
+  git --version
+  ```
 
-Customizable categories and currency symbols.
+**Optional:**
 
-Prerequisites
-Java Development Kit (JDK) 11+ (OpenJDK or Oracle; verify: java -version).
+* IntelliJ IDEA / Eclipse / VS Code
+* JUnit 5 (included via Maven)
 
-Maven 3.6+ (build tool; verify: mvn -version).
+---
 
-Git (for cloning; verify: git --version).
+## ⚙️ Installation
 
-Optional:
+### Clone the Repository
 
-IDE like IntelliJ IDEA, Eclipse, or VS Code with Java extensions.
-
-JUnit 5 (included via Maven for testing).
-
-Installation
-Clone the repository:
-
-text
+```bash
 git clone https://github.com/yourusername/personal-finance-tracker.git
 cd personal-finance-tracker
-Build with Maven:
+```
 
-text
+### Build with Maven
+
+```bash
 mvn clean compile
 mvn package
-(Alternative: Plain Java) Copy src/ to your workspace and compile manually:
+```
 
-text
-javac -d target/classes src/com/yourpackage/*.java
-Verify setup:
+### Run the Application
 
-text
-java -cp target/classes com.yourpackage.FinanceTrackerApp --version
-Initialize data directory (creates data/ folder):
-
-text
-java -cp target/classes com.yourpackage.FinanceTrackerApp init
-Usage
-Basic startup:
-
-text
+```bash
 java -cp target/classes com.yourpackage.FinanceTrackerApp
-Complete example session:
+```
 
-text
+### Initialize Data Directory
+
+```bash
+java -cp target/classes com.yourpackage.FinanceTrackerApp init
+```
+
+---
+
+## ▶️ Usage
+
+### Start Application
+
+```bash
+java -cp target/classes com.yourpackage.FinanceTrackerApp
+```
+
+### Example Session
+
+```
 === Personal Finance Tracker v1.0 ===
-1. Add Transaction    5. Set Budget
-2. View Dashboard     6. Import CSV
-3. Reports            7. Backup Data
-4. Accounts           8. Exit
-> 1
+
+1. Add Transaction
+2. View Dashboard
+3. Reports
+4. Accounts
+5. Set Budget
+6. Import CSV
+7. Backup Data
+8. Exit
+
 Amount: 2500
 Type: income
 Category: Salary
 Date: 2026-04-20
 Notes: Monthly paycheck
+
 ✓ Saved! Current balance: ₹45,670
+```
 
-> 2
-DASHBOARD (April 2026)
-Balance: ₹45,670    Income: ₹52,000    Expenses: ₹6,330
-Top Category: Food (₹2,150)
-[Progress bars for budgets...]
+### Command Line Options
 
-> 3
-Report type: monthly
-✓ Report saved to data/apr-2026-report.csv
-Command-line flags:
+```bash
+--help
+--account=business
+--version
+```
 
-text
-java -cp target/classes FinanceTrackerApp --help
-java -cp target/classes FinanceTrackerApp --account=business
-Data persists in data/transactions.json and data/backups/.
+---
 
-Roadmap
-Near-term (Next 3 months):
+## 📁 Data Storage
 
-JavaFX GUI for visual charts and easier navigation.
+* Transactions: `data/transactions.json`
+* Backups: `data/backups/`
 
-Multi-currency support with live exchange rates API.
+---
 
-Bank CSV import parser for major Indian banks (HDFC, SBI).
+## 🗺️ Roadmap
 
-Email/SMS budget alerts via Twilio.
+### 🔹 Near-term (3 months)
 
-Mid-term (6 months):
+* JavaFX GUI
+* Multi-currency support
+* Bank CSV import (HDFC, SBI)
+* Email/SMS alerts
 
-Web dashboard with Spring Boot + React.
+### 🔹 Mid-term (6 months)
 
-Cloud sync (Google Drive, Dropbox).
+* Web dashboard (Spring Boot + React)
+* Cloud sync (Google Drive, Dropbox)
+* Investment tracking
+* Tax calculation module
 
-Investment tracking (mutual funds, stocks).
+### 🔹 Long-term (1 year+)
 
-Tax calculation module for ITR filing.
+* Mobile apps (Android/iOS)
+* AI-powered insights
+* Family account sharing
+* UPI integration
 
-Long-term (1 year+):
+---
 
-Android/iOS companion apps.
+## 🤝 Contributing
 
-AI-powered spending insights and predictions.
+Contributions are welcome!
 
-Multi-user family account sharing.
+### Steps:
 
-Integration with UPI payment APIs.
-
-Contributing
-Love finance tools? Help us improve!
-
-Fork the repo and create your branch: git checkout -b feature/transaction-search.
-
-Development setup:
-
-text
+```bash
+git checkout -b feature/your-feature-name
 mvn clean test compile
-Commit changes: Use clear messages (git commit -m "Add transaction search filter").
+git commit -m "Add new feature"
+git push origin feature/your-feature-name
+```
 
-Push and PR: git push origin feature/transaction-search, then open a Pull Request.
+### Guidelines:
 
-Guidelines:
+* Follow Google Java Style
+* Write unit tests (target 80% coverage)
+* Update README for new features
+* Avoid breaking changes
 
-Follow Google Java Style.
+---
 
-Write unit tests (target 80% coverage).
+## 💡 Ways to Contribute
 
-Update README with new features.
+* Report bugs
+* Suggest features
+* Improve documentation
+* Add bank/currency support
 
-No breaking changes without discussion.
+---
+## Author
 
-Ways to contribute:
+Dileep 
 
-Report bugs with steps to reproduce.
 
-Suggest features via Issues.
+---
 
-Improve documentation or localization.
 
-Add support for more banks/currencies.
-
-Thanks for helping build better personal finance tools! 🌟
-
-License: MIT © Dileep
 
